@@ -1,1 +1,49 @@
- 
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.eot');
+  src: local('Gilroy Light'), local('Gilroy-Light'),
+    url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+* {
+  font-family: "Gilroy"
+}
+
+.bslib-card .card-body {
+  overflow: hidden;
+}
+
+.shiny-input-container {
+  width: auto !important;
+}
+
+.rt-text-content {
+  width: 100%;
+}
+
+.warning-table {
+  margin-top: 16px;
+  border: 1px solid hsl(213, 33%, 93%);
+  border-radius: 4pt;
+  background-color: transparent !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background-color: #2e3440;
+  border-bottom-color: #3b4252;
+  border-bottom-width: 1px;
+  color: hsl(213, 13%, 33%);
+}
+
+.header[aria-sort]:hover {
+  color: hsl(213, 55%, 50%);
+}
+
+.rt-expander:after {
+  border-top: 7px solid white !important;
+}

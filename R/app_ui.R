@@ -1,34 +1,48 @@
+#' The application theme
+#'
+#' @export
+app_theme <- function() {
+  bslib::bs_theme(
+    bg = "#2e3440",
+    fg = "#eceff4",
+    primary = "#00283c",
+    secondary = "#ff0000",
+    success = "#a3be8c",
+    info = "#4f93b8",
+    warning = "#d08770",
+    danger = "#bf616a",
+    base_font = "Gilroy",
+    code_font = "Fira Code",
+    heading_font = "Gilroy",
+    bootswatch = "darkly"
+  )
+}
+
 #' The application User-Interface
 #'
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
 #' @import shiny
 #' @import bs4Dash
+#' @import bslib
 #' @noRd
 app_ui <- function(request) {
-  theme <- fresh::create_theme(
-    fresh::bs4dash_status(primary = "#5E81AC", danger = "#BF616A")
-  )
-
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    bs4DashPage(
-      header = bs4DashNavbar(
-        status = "white",
-        border = TRUE,
-        skin = "light",
-        "LogEvent"
-      ),
-
-      title = "LogEvent",
-
-      sidebar = bs4DashSidebar(disable = TRUE),
-
-      body = bs4DashBody(
+    page_navbar(
+      window_title = "LogBook",
+      bg = "#00283c",
+      fluid = TRUE,
+      fillable = FALSE,
+      title = img(src = "www/logo.svg", width = "80"),
+      theme = app_theme(),
+      nav_panel(
+        title = "Avertissements",
         mod_log_event_ui("log_event")
       )
+      
     )
   )
 }
