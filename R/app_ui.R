@@ -23,7 +23,6 @@ app_theme <- function() {
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
 #' @import shiny
-#' @import bs4Dash
 #' @import bslib
 #' @noRd
 app_ui <- function(request) {
@@ -62,7 +61,7 @@ golem_add_external_resources <- function() {
   )
 
   tags$head(
-    favicon(),
+    favicon(ext = "png"),
     bundle_resources(
       path = app_sys("app/www"),
       app_title = "fnchLogbook"

@@ -33,7 +33,8 @@ run_app <- function(
   with_golem_options(
     app = shinyApp(
       ui = shinymanager::secure_app(
-        app_ui, 
+        app_ui,
+        theme = app_theme(),
         enable_admin = T, 
         language = "fr",
         tags_top = tags$div(tags$head(tags$style(css)))
