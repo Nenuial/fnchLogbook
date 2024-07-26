@@ -43,17 +43,19 @@ mod_log_event_ui <- function(id){
             label = "Catégories",
             choices = c(
               "Selectionnez" = "",
+              "Avertissement oral",
               "Carton jaune",
+              "Exclusion de l'épreuve",
+              "Exclusion de la manifestation",
               "Contrôle de la muserolle",
               "Contrôle de médication",
               "Contrôle de passeport",
-              "Exclusion de l'épreuve",
-              "Exclusion de la manifestation",
+              "Vaccination incomplète",
+              "Déclaration de médication",
               "Harnachement incorrect",
               "Incorrect envers le cheval",
               "Incorrect envers un officiel",
               "Infraction au règlement",
-              "Vaccination incomplète",
               "Autre"
             ),
             multiple = T

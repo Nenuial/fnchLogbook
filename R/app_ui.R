@@ -38,7 +38,7 @@ app_ui <- function(request) {
       title = img(src = "www/logo.svg", width = "80"),
       theme = app_theme(),
       nav_panel(
-        title = "Avertissements",
+        title = "Événements",
         mod_log_event_ui("log_event")
       )
       
